@@ -76,12 +76,29 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
         지시 사항
             프레젠테이션, 서비스, 퍼시스턴스 계층 만들기
 
-                1. 프레젠테이션 계층에 속하는 컨트롤러 관련 코드를 작성 -> test 생략
-                2. 비지니스 계층 코드 -> Test 와 같은 위쳉 TestService.java 생성
+                1. 프레젠테이션 계층에 속하는 컨트롤러 관련 코드를 작성 -> TestController 가 있으므로 생략
+                2. 비지니스 계층 코드 -> TestController 와 같은 위치에 TestService.java 생성
                 3. 퍼시스턴스 계층 코드 작성 -> 같은 위쳉 Member.java 생성 -> 실제 DB에 접근하는 코드 작성
                 4. 매핑 작업에는 '인터페이스' 파일이 필요. MemberRepository 인터페이스를 같은 위치에 생성
 
         작동을 확인
+
+            01 단계 - resources 폴더에 spl 문 하나 추가
+                resources 우클릭 -> new -> file -> data.sql
+
+            02 단계 - 이제는 기존에 만들어 둔 application.yml 을 수정
+
+            03 단계 - 서버 실행 후 ctrl + f 눌러서 create 검색해서 table 이 생성됐는지 확인
+
+            04 단계 - PsotMan 에서 HTTP 요청을 시도
+                1) 포스트맨 실행
+                2) HTTP 메서드를 GET 으로 설정하고 URL 에
+                    http://localhost:8080/test 로 설정(TestController.java 확인)
+                3) SEND 버튼 누릅니다.
+                4) 200 OK 인지 확인
+
+HTTP 요청 ----> TestController.java <----> TestService <----> MemberRepository <----> Database
+url:/test --->    프레젠테이션 계층           비지니스 계층        퍼시스턴스 계층            데이터베이스
  */
 @SpringBootApplication
 public class SpringBootDeveloperApplication {
