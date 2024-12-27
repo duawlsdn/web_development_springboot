@@ -52,5 +52,7 @@ public class JUnitQuiz {
         // number3 이 number2 보다 작은 값인지
         assertThat(number3).isLessThan(number2);
 
+        // test/java -> JUnitCycleQuiz.java
+
     }
 }
