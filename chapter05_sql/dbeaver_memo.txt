@@ -1,0 +1,10 @@
+데이터 처리 4  요소 :
+
+생성하기, 조회하기, 수정하기, 삭제하기
+
+Create, Read, Update, Delete (CRUD)
+
+POST, GET, PUT, DELETE
+
+Read 에 초점을 맞춘 수업!
+1.SELECT
