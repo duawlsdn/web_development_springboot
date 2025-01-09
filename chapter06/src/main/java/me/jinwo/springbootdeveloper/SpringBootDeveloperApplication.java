@@ -94,6 +94,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
     04 단계 - dto 와 동일한 service 패키지 생성 -> BlogService.java 생성
     05 단계 - service 와 동일한 라인에 controller 패키지 생성한 뒤에 BlogApiController.java 생성
     06 단계 - API 가 잘 작동하는지 하나 테스트를 해볼 예정,H2 콘솔 활성화,application.yml 로 이동, Postman 실행
+
+    07 단계 -
  */
 @SpringBootApplication
 public class SpringBootDeveloperApplication {
