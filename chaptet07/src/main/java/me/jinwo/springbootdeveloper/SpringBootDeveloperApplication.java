@@ -2,7 +2,9 @@ package me.jinwo.springbootdeveloper;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
+@EnableJpaAuditing  // created_at, updated_at 을 자동 업데이트 해주는 애너테이션
 @SpringBootApplication
 public class SpringBootDeveloperApplication {
     public static void main(String[] args) {
@@ -72,4 +74,15 @@ public class SpringBootDeveloperApplication {
             01 단계 - controller 패키지에 ExampleController.java 파일을 만들고 코드를 작성합니다.
 
             ExampleController.java 파일로 이동하세요.
+
+            2025-01-13 수업 사항
+
+            BlogViewController -> 메서드 추가
+            Article.java -> 필드 추가
+            ArticleViewResponse 작성
+            SpringBootDeveloperApplication 에 애너테이션
+            date.sql 수정
+            article.js 생성
+            article.html 수정
+            localhost:8080/articles/1 -> 삭제버튼
  */
