@@ -1,4 +1,4 @@
-// 주석 다는 방법 -> 삭제 기능을 구현
+// 삭제 기능을 구현
 const deleteButton = document.getElementById('delete-btn');
 
 if(deleteButton){
@@ -12,7 +12,7 @@ if(deleteButton){
                 location.replace('/articles')
         });
     });
-    // 이제 이게 article.html에서 동작할 수 있도록 작성을 할 예정
+    // 이제 이게 article.html에서 동작할 수 있도록 작성을 할 예
 }
 
 // 수정 기능을 구현
