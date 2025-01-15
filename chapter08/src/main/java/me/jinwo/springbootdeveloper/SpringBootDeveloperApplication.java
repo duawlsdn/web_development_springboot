@@ -12,8 +12,12 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
     6. dto/AddUserRequest.java
     7. service / UserService 생성
     8. controller / UserApiController.java 생성
-    9. controller / UserViewController.java
+    9. controller / UserViewController.java 생성
     10. resources / templates 에 login.html 생성
+    12. controller / UserApiController.java 로그아웃 관련 로직 작성
+    13. templates / articleList.html 이동
+    14. resources / application.yml 수정
+    15. domain / user -> @Table 수정 -> @Table(name = "users")
  */
 @EnableJpaAuditing
 @SpringBootApplication
