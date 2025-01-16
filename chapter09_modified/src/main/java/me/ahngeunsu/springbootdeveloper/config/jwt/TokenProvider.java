@@ -81,25 +81,26 @@ public class TokenProvider {
     }
 }
 /*
-    1.
+    1. makeToken():
         토큰을 생성하는 메서드 argument 로 만료시간, 유저 정보를 받았습니다.
         set 계열 메서드들을 통해 여러 값을 지정했는데
         header 에는 typ, 내용에는 iss, iat, exp, sub
         claim 에는 유저 id 지정
         토큰을 만들 때 properties 파일에 선언해둔 비밀 값과 함께 HS256 방식으로 암호화
 
-    2. 토큰이 유효한지 검증하는 메서드. 프로퍼티즈 파일에 선언한 비밀 값과 함께 토큰 보호화
+    2. validToken():
+        토큰이 유효한지 검증하는 메서드. 프로퍼티즈 파일에 선언한 비밀 값과 함께 토큰 보호화
         만약 보호화 과정에서 에러가 발생하면 유효하지 않은 토큰이므로 return false
         문제 없으면 return true
 
-    3.
+    3. getAuthentication():
         토큰을 받아 인증 정보를 담은 객체 Authentication 을 반환하는 메서드,
         프로ㅓ퍼티즈 파일에 저장한 비밀 값으로 토큰을 복화한 뒤 클레임을 가져오는 private 메서드
         getClaims() 를 호출, 클레임 정보를 반환 받아 사용자 이메일이 들어있는 토큰 제목 sub 와 토큰 기반으로 인증 정보를 생성
         UserPasswordAuthenticationToken 의 첫 argument 로 들어가는 User 는 프로젝트에서 만든 클래스가 아니라,
         스프링 시큐리티에서 제공하는 객체인 User 클래스를 import 해와야 하기 때문에 경로를 강제 설정
 
-    4. getUserId()
+    4. getUserId():
         토큰 기반으로  사용자 ID 를 가져오는 메서드. 프로퍼티즈 파일에 저장한 비밀값으로 토큰을 복호화한 다음 클레임이 가져오는
         private getClaims() 를 호출, 클레임 정보를 반환 받고, 클레임 id 키로 저장된 값을 가져와 반환
 
