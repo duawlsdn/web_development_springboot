@@ -3,7 +3,14 @@ package me.ahngeunsu.springbootdeveloper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
-
+/*
+    20250120 . chapter 10 ->  CookieUtil 부터 시작
+    User 재 정의
+    OAuth2UserCustomService.java 작성
+    WebOAuthSecurityConfig.java 작성
+    OAuth2AuthorizationRequestBasedOnCookieRepository 클래스 작성
+    ( WebOAuthSecurityConfig.java 의 오류부분 정의
+ */
 @EnableJpaAuditing
 @SpringBootApplication
 public class SpringBootDeveloperApplication {
